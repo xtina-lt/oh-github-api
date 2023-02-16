@@ -23,6 +23,14 @@ function App() {
     "url" : "https://github.com/xtina-lt/advant-calendar"}
   ]
 
+  const [list, setList] = useState([])
+
+  useEffect(()=>{
+    //                                     /YOUR USERNAME/
+    axios.get('https://api.github.com/users/xtina-lt/repos')
+      .then(res => {console.log(res); setList(res.data)})
+      .catch(err => console.log(err))
+  },[])
 
   return (
     <>
@@ -34,7 +42,20 @@ function App() {
       </nav>
 
       <main>
-
+        {
+          list.map( (item, idx) => (
+            <div key={idx}>
+              <h1>
+                {item.name}
+              </h1>
+              {item.language}
+              <br/>
+              {item.description}
+              <br/>
+              <a href={item.clone_url} target="_blank" rel="noreferrer">Link</a>
+            </div>
+          ))
+        }
       </main>
     </>
   );

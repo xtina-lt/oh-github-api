@@ -17,24 +17,31 @@ console.log(data)
 // 5. return new list
 // 6. log data
 
-// data.sort((a, b) => {
+data.sort((a, b) => {
+    let hobbyA = a.hobby.toUpperCase()
+    let hobbyB = b.hobby.toUpperCase()
+// if , else if, else
+     // return -1, 1, 0 == 0
+    if (hobbyA < hobbyB) {
+        return -1
+    } else if (hobbyA > hobbyB) {
+        return 1
+    } else {
+        return 0
+    }
+});
+
+console.log( data )
 
 
 
 
 
 
-// });
 
 
 
-
-
-
-
-
-
-// Model.find().sort([['species', 1]])
+// Model.find().sort([['hobby', -1]])
 
 
 
