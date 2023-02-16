@@ -40,6 +40,6 @@ console.log( data )
 
 
 
-// ######### BACKEND SORT
-// IN CONTROLLER
+// ######### BACKEND SORT IN CONTROLLER
+// only need one or the other
 // Model.find().sort([['hobby', 1]])
