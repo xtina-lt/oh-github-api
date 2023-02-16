@@ -40,36 +40,6 @@ console.log( data )
 
 
 
-
-// Model.find().sort([['hobby', -1]])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// data.sort((a, b) => {
-//     let hobbyA = a.hobby.toUpperCase();
-//     let hobbyB = b.hobby.toUpperCase();
-//     if (hobbyA < hobbyB) {
-//         return -1; // hobbyA is placed before hobbyB
-//     } else if (hobbyA > hobbyB) {
-//         return 1; // hobbyB is placed before hobbyA
-//     } else {
-//         return 0; // names must be equal
-//     }
-    
-// });
-
-// console.log(data)
+// ######### BACKEND SORT
+// IN CONTROLLER
+// Model.find().sort([['hobby', 1]])
